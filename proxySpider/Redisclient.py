@@ -6,7 +6,7 @@ class Redis(object):
 
     def __init__(self):
         if REDIS_PASSWORD:
-            self.__db = StrictRedis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD, db=3)
+            self.__db = StrictRedis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD)
         else:
             self.__db = StrictRedis(host=REDIS_HOST, port=REDIS_PORT, db=3)
 
